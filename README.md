@@ -78,23 +78,22 @@ Warning: After this point, change 'Luis Morales', 'lacion', etc to your own info
 
 Answer the prompts with your own desired [options](). For example:
 ```console
-full_name [Luis Morales]: Luis Morales
-github_username [lacion]: lacion
-app_name [mygolangproject]: echoserver
-project_short_description [A Golang project.]: Awesome Echo Server
-docker_hub_username [lacion]: lacion
-docker_image [lacion/docker-alpine:latest]: lacion/docker-alpine:latest
-docker_build_image [lacion/docker-alpine:gobuildimage]: lacion/docker-alpine:gobuildimage
+full_name [Your Name]: Your name
+github_username [github_user]: your_github_username
+app_name [mygolangproject]: "myawesomegolangserver"
+project_short_description [A Golang project.]: Awesome Golang Server
+docker_hub_username [docker_username]: your_docker_username
+docker_image [golang:latest]: golang:latest
+docker_build_image [golang:latest]: golang:latest
 use_docker [y]: y
 use_git [y]: y
 use_logrus_logging [y]: y
 use_viper_config [y]: y
 use_cobra_cmd [y]: y
 Select use_ci:
-1 - travis
-2 - circle
-3 - none
-Choose from 1, 2, 3 [1]: 1
+1 - github_actions
+2 - none
+Choose from 1, 2 [1]: 1
 ```
 
 Enter the project and take a look around:
