@@ -10,9 +10,6 @@ import (
 	"fmt"
 	"github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version"{% endif %}
 	{% if cookiecutter.use_cobra_cmd == "y" %}"github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/cmd"{% endif %}
-	"go.opentelemetry.io/otel"
-	"go.opentelemetry.io/otel/attribute"
-	"go.opentelemetry.io/otel/trace"
 )
 
 const name = "echoserver"

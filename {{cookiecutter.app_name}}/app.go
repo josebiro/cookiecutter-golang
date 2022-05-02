@@ -6,6 +6,10 @@ import (
 	"io"
 	"log"
 	"strconv"
+
+	"go.opentelemetry.io/otel"
+	"go.opentelemetry.io/otel/attribute"
+	"go.opentelemetry.io/otel/trace"
 )
 
 // App is a Fibonacci computation application.
