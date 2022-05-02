@@ -23,8 +23,7 @@ build: ## Compile the projecct
 	@echo "GOPATH=${GOPATH}"
 	go build -ldflags "-X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.GitCommit=${GIT_COMMIT}${GIT_DIRTY} -X github.com/{{cookiecutter.github_username}}/{{cookiecutter.app_name}}/version.BuildDate=${BUILD_DATE}" -o bin/${BIN_NAME}
 
-get-deps: ## Run dep ensure, mostly used for CI.
-	#dep ensure
+deps: ## Run dep ensure, mostly used for CI.
 	go mod download
 
 {% if cookiecutter.use_docker == "y" %}
