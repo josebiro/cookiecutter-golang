@@ -80,7 +80,7 @@ Answer the prompts with your own desired [options](). For example:
 ```console
 full_name [Your Name]: Your name
 github_username [github_user]: your_github_username
-app_name [mygolangproject]: "myawesomegolangserver"
+app_name [mygolangproject]: mygolangproject
 project_short_description [A Golang project.]: Awesome Golang Server
 docker_hub_username [docker_username]: your_docker_username
 docker_image [golang:latest]: golang:latest
@@ -106,7 +106,7 @@ Run `make help` to see the available management commands, or just run `make buil
 ```console
 $ make help
 $ make build
-$ ./bin/echoserver
+$ ./bin/mygolangproject
 ```
 
 ## Acknowledgements
