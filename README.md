@@ -1,16 +1,33 @@
 # cookiecutter-golang
 
-[![Build Status](https://travis-ci.org/lacion/cookiecutter-golang.svg?branch=master)](https://travis-ci.org/lacion/cookiecutter-golang)
-
 Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter Golang is a framework for jumpstarting production-ready go projects quickly.
+
+The intent is to provide an opinionated set of integrations and libraries that make it easy to build, command, and control system health reliably in greenfield situations. Some functions might be exported to libraries that are capable of being used in brownfield scenarios as well.
 
 ## Features
 
 - Generous `Makefile` with management commands
-- Uses `go dep` (with optional go module support *requires go 1.11*)
+- Uses `go mod`
 - injects build time and git hash at build time.
 
+TODO:
+* [ ] Add a default metrics endpoint and port
+* [ ] Add metrics generation decorators for functions (maybe as an external library)
+* [ ] Add dashboard discovery (link to external grafana dashboard service)
+* [ ] Add service monitor configuration for prometheus operator/prometheus
+* [ ] Add dashboard json or whatever config for grafana import or deployment
+* [ ] Export dependencies (upstream/downstream) on an endpoint and port
+
 ## Optional Integrations
+
+TODO:
+* [ ] Add integration for opentelemetry
+* [ ] Add integration for github actions
+* [ ] Add libraries for secret management
+* [ ] Utility functions for maintaining an approximation of what resources are required to scale up as a function of actual performance of code under load, and compare resources available to various user configurable thresholds.
+* [ ] Add grpc integration
+* [ ] Add openapi 3 integration
+
 
 - Can use [viper](https://github.com/spf13/viper) for env var config
 - Can use [cobra](https://github.com/spf13/cobra) for cli tools
@@ -21,16 +38,16 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 
 ## Constraints
 
-- Uses `dep` or `mod` for dependency management
+- Use `mod` for dependency management (requires GO1.11 or greater)
 - Only maintained 3rd party libraries are used.
 
-This project now uses docker multistage builds, you need at least docker version v17.05.0-ce to use the docker file in this template, [you can read more about multistage builds here](https://www.critiqus.com/post/multi-stage-docker-builds/).
+This project uses docker multistage builds, you need at least docker version v17.05.0-ce to use the docker file in this template, [you can read more about multistage builds here](https://www.critiqus.com/post/multi-stage-docker-builds/).
 
 ## Docker
 
 This template uses docker multistage builds to make images slimmer and containers only the final project binary and assets with no source code whatsoever.
 
-You can find the image dokcer file in this [repo](https://github.com/lacion/alpine-golang-buildimage) and more information about docker multistage builds in this [blog post](https://www.critiqus.com/post/multi-stage-docker-builds/).
+You can find the image docker file in this [repo](https://github.com/lacion/alpine-golang-buildimage) and more information about docker multistage builds in this [blog post](https://www.critiqus.com/post/multi-stage-docker-builds/).
 
 Apps run under non root user and also with [dumb-init](https://github.com/Yelp/dumb-init).
 
@@ -93,6 +110,5 @@ $ make build
 $ ./bin/echoserver
 ```
 
-## Projects build with cookiecutter-golang
-
-- [iothub](https://github.com/lacion/iothub) websocket multiroom server for IoT
+## Acknowledgements
+This is a fork from [lacion/cookiecutter-golang](https://github.com/lacion/cookiecutter-golang)
