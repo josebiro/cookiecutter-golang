@@ -51,6 +51,9 @@ You can find the image docker file in this [repo](https://github.com/lacion/alpi
 
 Apps run under non root user and also with [dumb-init](https://github.com/Yelp/dumb-init).
 
+TODO
+* [ ] Convert to distroless
+
 ## Usage
 
 Let's pretend you want to create a project called "echoserver". Rather than starting from scratch maybe copying 
