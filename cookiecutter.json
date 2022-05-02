@@ -1,9 +1,9 @@
 {
-    "full_name": "Your Name",
-    "github_username": "github_user",
-    "app_name": "mygolangproject",
-    "project_short_description": "A Golang project.",
-    "docker_hub_username": "docker_user",
+    "full_name": "Joseph",
+    "github_username": "josebiro",
+    "app_name": "testgolangproject",
+    "project_short_description": "Golang project scaffolding project.",
+    "docker_hub_username": "josebiro",
     "docker_image": "golang",
     "docker_build_image": "golang",
     "docker_build_image_version": [
@@ -11,11 +11,12 @@
         "1.18.1-alpine3.14",
         "1.17.9-alpine3.15",
         "1.17.9-alpine3.14"],
-    "go_mod_or_dep": ["mod"],
     "use_docker": "y",
     "use_git": "y",
     "use_logrus_logging": "y",
     "use_viper_config": "y",
     "use_cobra_cmd": "y",
+    "use_grpc": "y",
+    "use_openapi": "y",
     "use_ci": ["github-actions", "none"]
 }

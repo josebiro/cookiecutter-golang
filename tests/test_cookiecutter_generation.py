@@ -24,7 +24,10 @@ def context():
         "use_docker": "y",
         "use_git": "y",
         "use_logrus_logging": "y",
-        "use_viper_config": "y"
+        "use_viper_config": "y",
+        "use_cobra_cmd": "y",
+        "use_grpc": "y",
+        "use_openapi": "y"
 }
 
 def build_files_list(root_dir):
